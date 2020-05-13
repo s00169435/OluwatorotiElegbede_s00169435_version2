@@ -4,15 +4,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OluwatorotiElegbede_s00169435"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <ListBox x:Name="lbxPhones" HorizontalAlignment="Left" Height="247" Margin="109,91,0,0" VerticalAlignment="Top" Width="208" SelectionChanged="lbxPhones_SelectionChanged">
+        <ListBox x:Name="lbxPhones" HorizontalAlignment="Left" Height="247" Margin="109,91,0,0" VerticalAlignment="Top" Width="208" SelectionChanged="lbxPhones_SelectionChanged" Style="{StaticResource MaterialDesignCardsListBox}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
                         <Image Source="{Binding Path = OS_Image}"/>
-                        <TextBlock Text="{Binding Path = Name}"/>
+                        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Path = Name}" Style="{StaticResource MaterialDesignSubtitle1TextBlock}" Margin="10,0,0,0"/>
+                        </Grid>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
