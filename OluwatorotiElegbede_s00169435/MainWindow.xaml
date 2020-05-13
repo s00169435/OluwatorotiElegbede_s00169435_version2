@@ -1,0 +1,25 @@
+﻿<Window x:Class="OluwatorotiElegbede_s00169435.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OluwatorotiElegbede_s00169435"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <ListBox x:Name="lbxPhones" HorizontalAlignment="Left" Height="247" Margin="109,91,0,0" VerticalAlignment="Top" Width="208" SelectionChanged="lbxPhones_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding Path = OS_Image}"/>
+                        <TextBlock Text="{Binding Path = Name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <TextBlock x:Name="txtBlkPrice" HorizontalAlignment="Left" Margin="475,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="51" Width="130" FontSize="25"><Run Text=""/><LineBreak/><Run/></TextBlock>
+        <Image x:Name="imgPhone" HorizontalAlignment="Left" Height="162" Margin="475,176,0,0" VerticalAlignment="Top" Width="130"/>
+
+    </Grid>
+</Window>
